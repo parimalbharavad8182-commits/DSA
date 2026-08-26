@@ -8,6 +8,7 @@ public:
 
         while (curr != nullptr) {
             ListNode* nextNode = curr->next;
+            
      
             ListNode* prev = &dummy;
             while (prev->next != nullptr && prev->next->val < curr->val) {
@@ -16,7 +17,6 @@ public:
             curr->next = prev->next;
             prev->next = curr;
 
-        
             curr = nextNode;
         }
 
